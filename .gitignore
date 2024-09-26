@@ -8,6 +8,9 @@
 *.d
 
 
+# Text Files
+*.json
+
 # Image files
 *.jpg
 *.png
