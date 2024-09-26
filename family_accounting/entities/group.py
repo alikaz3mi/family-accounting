@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List
 
-from family_accounting.entities import GroupMember
+from family_accounting.entities.group_member import GroupMember
 
 
 class Group(BaseModel):

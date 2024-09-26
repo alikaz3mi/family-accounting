@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field, EmailStr
 from typing import Optional, List
 
-from family_accounting.entities import GroupMember
+from family_accounting.entities.group_member import GroupMember
 
 
 class User(BaseModel):
@@ -14,7 +14,7 @@ class User(BaseModel):
     )
     phone: str = Field(
         ...,
-        regex=r"^\+?\d{10,15}$",
+        pattern=r"^\+?\d{10,15}$",
         description="Phone number of the user",
     )
     telegram_id: Optional[str] = Field(None, description="Telegram ID for login")
