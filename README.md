@@ -16,11 +16,11 @@ rm -rf _build && make html
 ## Install Package
 
 ```bash
-pip install git+ssh://git@git.parstechai.com/ # TODO
+pip install git+ssh://git@github.com/ # TODO
 
 or
 
-pip install git+https://git.parstechai.com/  # TODO
+pip install git+https://github.com/  # TODO
 
 or
 
@@ -60,7 +60,7 @@ python main.py
 ## Runnig API
 
 ```bash
-docker network create parsetch_network
+docker network create radtharn_network
 docker-compose up
 ```
 

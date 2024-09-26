@@ -1,5 +1,5 @@
 ==================================================================
-Parstech family_accounting Documentation
+Radtharn family_accounting Documentation
 ==================================================================
 
 Welcome text

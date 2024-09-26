@@ -18,8 +18,8 @@ sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
 
-project = "Parstech family_accounting"
-copyright = "2021, Parstech"
+project = "Radtharn family_accounting"
+copyright = "2021, Radtharn"
 author = ""
 
 
