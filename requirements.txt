@@ -3,3 +3,6 @@ PyYAML>=6.0
 tqdm
 ijson
 python-socketio
+passlib==1.7.4
+sqlalchemy==2.0.28
+alembic==1.13.3

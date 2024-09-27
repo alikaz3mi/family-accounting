@@ -14,18 +14,18 @@ class TestRegistrationUseCase(unittest.TestCase):
         self.user_repository.find_by_phone.return_value = None
         self.user_repository.create_user.return_value = User(
             id=1,
-            name="John Doe",
+            username="John Doe",
             phone="+1234567891",
             telegram_id=None,
             is_verified=False,
         )
 
         # Execute the use case
-        user = self.use_case.execute(phone="+123456789", name="John Doe")
+        user = self.use_case.execute(phone="+1234567891", username="John Doe")
 
         # Assert the correct user was created
         self.user_repository.create_user.assert_called_once()
-        self.assertEqual(user.name, "John Doe")
+        self.assertEqual(user.username, "John Doe")
 
     def test_registration_with_existing_user(self):
         # Setup the mock to return an existing user
@@ -39,7 +39,7 @@ class TestRegistrationUseCase(unittest.TestCase):
 
         # Attempt registration and expect an exception
         with self.assertRaises(ValueError):
-            self.use_case.execute(phone="+123456789", name="John Doe")
+            self.use_case.execute(phone="+1234567891", username="John Doe")
 
 
 if __name__ == "__main__":
