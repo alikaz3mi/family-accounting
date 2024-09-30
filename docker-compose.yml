@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14.1
+    container_name: family-accounting-postgres
+    hostname: family-accounting-postgres
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - family_accounting_network
+
+  family-accounting:
+    build:
+      context: .
+    container_name: family-accounting-service
+    command: >
+      python3 -m family_accounting
+    hostname: family-accounting-service
+
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    networks:
+      - family_accounting_network
+
+networks:
+  family_accounting_network:
+    driver: bridge
+
+volumes:
+  db_data:

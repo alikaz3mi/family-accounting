@@ -1,8 +1,6 @@
 pydantic[email]==2.6.3
-PyYAML>=6.0
-tqdm
-ijson
-python-socketio
+python-socketio==5.9.0
 passlib==1.7.4
 sqlalchemy==2.0.28
 alembic==1.13.3
+loguru==0.7.2
