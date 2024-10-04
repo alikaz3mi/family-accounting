@@ -10,7 +10,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     volumes:
-      - ./db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
@@ -20,6 +20,7 @@ services:
     build:
       context: .
     container_name: family-accounting-service
+    image: family_accounting:latest
     command: >
       python3 -m family_accounting
     hostname: family-accounting-service
@@ -37,3 +38,4 @@ networks:
 
 volumes:
   db_data:
+    driver: local

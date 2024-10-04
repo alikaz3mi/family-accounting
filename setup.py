@@ -64,4 +64,7 @@ setup(
     zip_safe=False,
     packages=find_packages(),
     install_requires=post_install(),
+    entry_points={
+        "console_scripts": ["family_accounting = family_accounting.__main__:main"],
+    },
 )

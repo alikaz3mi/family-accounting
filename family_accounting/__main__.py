@@ -1,3 +1,9 @@
 from family_accounting import LOGGER
 
-LOGGER.info("Welcome to Family Accounting")
+
+def main():
+    LOGGER.info("Welcome to Family Accounting")
+
+
+if __name__ == "__main__":
+    main()

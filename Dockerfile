@@ -39,6 +39,14 @@ COPY family_accounting/__init__.py ./family_accounting
 
 USER user
 
-RUN pip install -e .
+RUN if git diff --exit-code HEAD requirements.txt > /dev/null; then \
+    echo "requirements.txt has not changed, installing without deps"; \
+    pip install --no-deps -e .; \
+else \
+    echo "requirements.txt has changed, installing with deps"; \
+    pip install -e .; \
+fi
+
+COPY . .
 
 CMD ["/bin/bash"]

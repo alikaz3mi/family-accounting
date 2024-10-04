@@ -1,9 +1,9 @@
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __name__ = "family_accounting"
 
 import os
 from pathlib import Path
-from .utils.logging import simple_logger
+from family_accounting.utils.logging import simple_logger
 
 
 DEFAULT_PATH = Path(os.path.realpath(__file__)).parents[1]

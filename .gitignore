@@ -329,6 +329,7 @@ cython_debug/
 family_accounting/data/storage
 family_accounting/results
 family_accounting/data/storage
+db_data
 
 !family_accounting/tests/samples
 !family_accounting/tests/samples
