@@ -4,3 +4,6 @@ passlib==1.7.4
 sqlalchemy==2.0.28
 alembic==1.13.3
 loguru==0.7.2
+typing==3.7.4.3
+setuptools==70.1.1
+lagom==2.4.1

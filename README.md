@@ -19,7 +19,7 @@ The **Family Accounting System** is designed to manage user registration, login,
   - **Owner**: Full control over the group.
   - **Administrator**: Can manage group members and tasks, with fewer privileges than the Owner.
   - **Ordinary Member**: Can only observe and view information within the group.
-  
+
   Future access levels can be easily extended based on this flexible structure.
 
 ### OCR and Natural Language Processing
@@ -65,11 +65,11 @@ Each use case focuses on a specific part of the business logic, such as user reg
 #### Registration Use Case
 - Allows users to register via either Telegram or Streamlit.
 - The phone number is required, and the system ensures no duplicate phone numbers are registered.
-  
+
 #### Login Use Case
 - Users can log in using their phone number.
 - Authentication can be done via an OTP code or password.
-  
+
 ### Tools and Technologies
 This project uses the following tools and libraries:
 - **FastAPI**: Web framework for building APIs.
@@ -143,7 +143,7 @@ If you'd like to contribute, feel free to open an issue or submit a pull request
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT [LICENSE](LICENSE).
 
 ---
 

@@ -6,7 +6,7 @@ services:
     container_name: family-accounting-postgres
     hostname: family-accounting-postgres
     environment:
-      POSTGRES_USER: ${DB_USER}
+      POSTGRES_USER: ${DB_USERNAME}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     volumes:
